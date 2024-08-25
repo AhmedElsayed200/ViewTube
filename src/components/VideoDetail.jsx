@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import { Typography, Box, Stack } from "@mui/material";
+import { Typography, Box, Stack, useTheme } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 import ReactPlayer from "react-player";
@@ -13,6 +13,9 @@ const VideoDetail = () => {
   const { id } = useParams();
   const [videoDetail, setVideoDetail] = useState(null);
   const [relatedVideos, setRelatedVideos] = useState([]);
+
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === "dark";
 
   useEffect(() => {
     const fetchVideoDetails = async () => {
@@ -51,7 +54,12 @@ const VideoDetail = () => {
               className="react-player"
               controls
             />
-            <Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
+            <Typography
+              color={isDarkMode ? "white" : "black"}
+              variant="h5"
+              fontWeight="bold"
+              p={2}
+            >
               {title}
             </Typography>
             <Stack

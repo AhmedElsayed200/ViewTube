@@ -1,6 +1,12 @@
 import React from "react";
 
-import { Box, CardContent, CardMedia, Typography } from "@mui/material";
+import {
+  Box,
+  CardContent,
+  CardMedia,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { Link } from "react-router-dom";
 
@@ -12,6 +18,9 @@ const ChannelCard = ({ channelDetail, marginTop }) => {
   const channelTitle = snippet?.title;
   const channelThumbnail = snippet?.thumbnails?.high?.url || profilePictureDemo;
   const subscriberCount = statistics?.subscriberCount;
+
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === "dark";
 
   return (
     <Box
@@ -35,7 +44,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => {
             justifyContent: "center",
             alignItems: "center",
             textAlign: "center",
-            color: "#fff",
+            color: isDarkMode ? "white" : "black",
           }}
         >
           <CardMedia

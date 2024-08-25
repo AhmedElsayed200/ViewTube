@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, useTheme } from "@mui/material";
 
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Videos, Sidebar } from "./";
@@ -8,6 +8,8 @@ import { Videos, Sidebar } from "./";
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
   const [videos, setVideos] = useState([]);
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === "dark";
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -40,7 +42,10 @@ const Feed = () => {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-        <Typography variant="body2" sx={{ mt: 1.5, color: "#fff" }}>
+        <Typography
+          variant="body2"
+          sx={{ mt: 1.5, color: isDarkMode ? "#fff" : "#000" }}
+        >
           &copy; 2024 Ahmed Elsayed
         </Typography>
       </Box>
@@ -50,7 +55,7 @@ const Feed = () => {
           variant="h4"
           fontWeight="bold"
           mb={2}
-          sx={{ color: "white" }}
+          sx={{ color: isDarkMode ? "white" : "black" }}
         >
           {selectedCategory} <span style={{ color: "#FC1503" }}>videos</span>
         </Typography>

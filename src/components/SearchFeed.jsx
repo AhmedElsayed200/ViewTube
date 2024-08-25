@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, useTheme } from "@mui/material";
 
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Videos } from "./";
@@ -9,6 +9,9 @@ import { Videos } from "./";
 const SearchFeed = () => {
   const { searchTerm } = useParams();
   const [videos, setVideos] = useState([]);
+
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === "dark";
 
   useEffect(() => {
     const fetchSearchResults = async () => {
@@ -32,7 +35,7 @@ const SearchFeed = () => {
         mb={3}
         ml={{ sm: "100px" }}
         fontWeight={900}
-        color="white"
+        color={isDarkMode ? "white" : "black"}
       >
         Search Results for{" "}
         <span style={{ color: "#FC1503" }}>{searchTerm}</span> videos
