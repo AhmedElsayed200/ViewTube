@@ -42,12 +42,6 @@ const Feed = () => {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-        <Typography
-          variant="body2"
-          sx={{ mt: 1.5, color: isDarkMode ? "#fff" : "#000" }}
-        >
-          &copy; 2024 Ahmed Elsayed
-        </Typography>
       </Box>
 
       <Box p={2} sx={{ height: "90vh", flex: 2, overflowY: "auto" }}>

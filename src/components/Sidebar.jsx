@@ -37,6 +37,12 @@ const Categories = ({ selectedCategory, setSelectedCategory }) => {
           <span
             style={{
               opacity: category.label === selectedCategory ? 1 : 0.8,
+              color:
+                category.label === selectedCategory
+                  ? "white"
+                  : isDarkMode
+                  ? "white"
+                  : "black",
             }}
           >
             {category.label}

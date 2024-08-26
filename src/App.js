@@ -11,7 +11,7 @@ import {
 } from "./components";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const theme = createTheme({
     palette: {

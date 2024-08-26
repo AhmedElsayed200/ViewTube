@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Typography, Card, CardContent, CardMedia } from "@mui/material";
+import {
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  useTheme,
+} from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 import {
@@ -23,11 +29,16 @@ const VideoCard = ({ video }) => {
   const videoUrl = videoId ? `/video/${videoId}` : videoDemoUrl;
   const channelTitle = snippet?.channelTitle.slice(0, 10) || channelDemoTitle;
 
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === "dark";
+
   return (
     <Card
       sx={{
-        borderRadius: 0,
         boxShadow: "none",
+        borderRadius: "10px",
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
         width: { xs: "100%", sm: "358px", md: "320px" },
       }}
     >
@@ -36,17 +47,25 @@ const VideoCard = ({ video }) => {
           component="img"
           image={thumbnailUrl}
           alt={snippet?.title}
-          sx={{ height: 180, width: { xs: "100%", sm: "358px" } }}
+          sx={{
+            borderRadius: "10px",
+            height: 180,
+            width: { xs: "100%", sm: "358px", md: "320px" },
+          }}
         />
       </Link>
       <CardContent
         sx={{
-          backgroundColor: "#1E1E1E",
+          backgroundColor: isDarkMode ? "#1E1E1E" : "#FFF",
           height: "106px",
         }}
       >
         <Link to={videoUrl}>
-          <Typography variant="subtitle1" fontWeight="bold" color="#FFF">
+          <Typography
+            variant="subtitle1"
+            fontWeight="bold"
+            color={isDarkMode ? "#FFF" : "#000"}
+          >
             {videoTitle}
           </Typography>
         </Link>

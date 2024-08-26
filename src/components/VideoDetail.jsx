@@ -67,13 +67,11 @@ const VideoDetail = () => {
               py={1}
               px={2}
               justifyContent="space-between"
-              sx={{ color: "#fff" }}
+              sx={{ color: isDarkMode ? "#fff" : "#000" }}
+              marginTop="-20px"
             >
               <Link to={`/channel/${channelId}`}>
-                <Typography
-                  color="#fff"
-                  variant={{ sm: "subtitle1", md: "h6" }}
-                >
+                <Typography variant={{ sm: "subtitle1", md: "h6" }}>
                   {channelTitle}
                   <CheckCircleIcon
                     sx={{ fontSize: "12px", color: "gray", ml: "5px" }}
