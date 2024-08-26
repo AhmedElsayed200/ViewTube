@@ -22,7 +22,8 @@ const SearchBar = () => {
       component="form"
       onSubmit={handleSubmit}
       sx={{
-        marginRight: { sm: 5 },
+        padding: { xs: "10px", sm: "10px" },
+        width: { xs: "200px", sm: "400px" },
         border: "1px solid #e3e3e3",
         borderRadius: 20,
         paddingLeft: 2,
@@ -32,13 +33,23 @@ const SearchBar = () => {
       <input
         className="search-bar"
         placeholder="Search..."
+        style={{
+          width: "90%",
+          padding: { xs: "30px", sm: "10px" },
+          marginLeft: "6px",
+          flex: 1,
+        }}
         value={searchKeyword}
         onChange={(e) => setSearchKeyword(e.target.value)}
       />
       <IconButton
         type="submit"
         aria-label="search"
-        sx={{ padding: "10px", color: "red" }}
+        sx={{
+          padding: 0,
+          color: "red",
+          display: { xs: "none", sm: "inline" },
+        }}
       >
         <SearchIcon />
       </IconButton>
