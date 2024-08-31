@@ -39,7 +39,7 @@ const VideoCard = ({ video }) => {
         borderRadius: "10px",
         borderBottomLeftRadius: 0,
         borderBottomRightRadius: 0,
-        width: { xs: "100%", sm: "358px", md: "320px" },
+        width: { xs: "300px", sm: "358px", md: "320px" },
       }}
     >
       <Link to={videoUrl}>
@@ -50,7 +50,7 @@ const VideoCard = ({ video }) => {
           sx={{
             borderRadius: "10px",
             height: 180,
-            width: { xs: "100%", sm: "358px", md: "320px" },
+            width: { xs: "300px", sm: "358px", md: "320px" },
           }}
         />
       </Link>
