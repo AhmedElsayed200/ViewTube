@@ -32,13 +32,13 @@ _Home Page with search and trending videos_
 ![Home Page](./readme-assets/home-page-dark.PNG)
 _Home Page in dark mode_
 
-![Video Page](./readme-assets/video-page-light.png)
+![Video Page](./readme-assets/video-page-light.PNG)
 _Video Playback and related content_
 
-![Video Page](./readme-assets/video-page-dark.png)
+![Video Page](./readme-assets/video-page-dark.PNG)
 _Video Playback in dark mode_
 
-![Search Page](./readme-assets/search-page.png)
+![Search Page](./readme-assets/search-page.PNG)
 _Search Page_
 
 ## Getting Started
