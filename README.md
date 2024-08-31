@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# ViewTube
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ViewTube is a modern, responsive YouTube clone built using React, Material-UI, and YouTube Data API. This project replicates the core functionalities of YouTube, allowing users to search for videos, view video details, explore channels, and more, all within an intuitive and visually appealing interface.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Demo](#demo)
+- [Screenshots](#screenshots)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop devices.
+- **Search Functionality**: Search for videos across YouTube using the YouTube Data API.
+- **Video Playback**: Watch videos directly within the application.
+- **Channel Details**: View detailed information about channels, including recent uploads and subscriber count.
+- **Dynamic Sidebar**: Browse categories dynamically based on your preferences.
+- **Light and Dark Mode**: Toggle between light and dark themes for an optimal viewing experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo
 
-### `npm test`
+Check out ViewTube [here](https://www.yourlink.com).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Screenshots
 
-### `npm run build`
+![Home Page](./readme-assets/home-page-light.PNG)
+_Home Page with search and trending videos_
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Home Page](./readme-assets/home-page-dark.PNG)
+_Home Page in dark mode_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Video Page](./readme-assets/video-page-light.png)
+_Video Playback and related content_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Video Page](./readme-assets/video-page-dark.png)
+_Video Playback in dark mode_
 
-### `npm run eject`
+![Search Page](./readme-assets/search-page.png)
+_Search Page_
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Before you begin, ensure you have the following installed:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Node.js** (v12.x or higher)
+- **npm** or **yarn**
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Clone the repository:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   git clone https://github.com/AhmedElsayed200/ViewTube.git
+   cd viewtube
+   ```
 
-### Code Splitting
+2. **Install dependencies:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+   npm install
+    # or
+    yarn install
+   ```
 
-### Analyzing the Bundle Size
+3. **Set up environment variables:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   REACT_APP_YOUTUBE_API_KEY=your_youtube_data_api_key
+   ```
 
-### Making a Progressive Web App
+4. **Start the development server:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```bash
+   npm start
+    # or
+    yarn start
+   ```
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   Your app should now be running on http://localhost:3000.
