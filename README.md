@@ -22,7 +22,7 @@ ViewTube is a modern, responsive YouTube clone built using React, Material-UI, a
 
 ## Demo
 
-Check out ViewTube [here](https://dynamic-sopapillas-bd4c9b.netlify.app/).
+Check out ViewTube [here](https://viewtube-appview.netlify.app/).
 
 ## Screenshots
 
